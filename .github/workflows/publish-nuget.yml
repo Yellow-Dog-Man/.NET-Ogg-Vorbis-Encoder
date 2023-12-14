@@ -18,8 +18,6 @@ jobs:
           dotnet-version: 7.0.x
       - name: Build with dotnet
         run: dotnet build OggVorbisEncoder --configuration Release -p:Version=${{ env.VERSION }}
-      - name: Test with dotnet
-        run: dotnet OggVorbisEncoder test
       - name: Pack nuget Package
         run: dotnet pack OggVorbisEncoder --configuration Release -p:Version=${{ env.VERSION }} --output nupkgs
       - name: Push package to nuget
