@@ -1,5 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <!-- NUGET META DATA -->
+  <PropertyGroup>
+    <PackageId>YellowDogMan.OggVorbisEncoder</PackageId>
+    <Id>YellowDogMan.OggVorbisEncoder</Id>
+    <RepositoryUrl>https://github.com/Yellow-Dog-Man/.NET-Ogg-Vorbis-Encoder</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectURL>https://github.com/Yellow-Dog-Man/.NET-Ogg-Vorbis-Encoder</PackageProjectURL>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+  </PropertyGroup>
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461;net6.0;net7.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
@@ -7,12 +16,9 @@
 
     <Authors>Steve Lillis</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/SteveLillis/.NET-Ogg-Vorbis-Encoder</PackageProjectUrl>
-    <Description>A .NET Ogg Vorbis audio encoding library written entirely in managed code.</Description>
+    <Description>Fork of Steve Lillis's .NET Ogg Vorbis audio encoding library, written entirely in managed code.</Description>
     <Owners>SteveLillis, cabauman</Owners>
     <PackageTags>vorbis;ogg;encoder</PackageTags>
-    <RepositoryUrl>https://github.com/SteveLillis/.NET-Ogg-Vorbis-Encoder</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
     <Version>1.2.2</Version>
     <PackageReleaseNotes>v1.2.2
 - Add net7.0 as a target framework
