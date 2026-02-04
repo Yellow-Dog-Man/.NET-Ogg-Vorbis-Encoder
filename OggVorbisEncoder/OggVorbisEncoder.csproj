@@ -10,7 +10,7 @@
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net461;net6.0;net7.0;net9.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
 
@@ -19,8 +19,13 @@
     <Description>Fork of Steve Lillis's .NET Ogg Vorbis audio encoding library, written entirely in managed code.</Description>
     <Owners>SteveLillis, cabauman</Owners>
     <PackageTags>vorbis;ogg;encoder</PackageTags>
-    <Version>1.2.2</Version>
-    <PackageReleaseNotes>v1.2.2
+    <RepositoryUrl>https://github.com/SteveLillis/.NET-Ogg-Vorbis-Encoder</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Version>1.2.3</Version>
+    <PackageReleaseNotes>v1.2.3
+- Add net9.0 as a target framework
+- Fix exceptions when decoding certain files due to not being able to compute absolute value of the MinValue integer
+v1.2.2
 - Add net7.0 as a target framework
 - Remove net5.0 support
 v1.2.1
@@ -32,7 +37,7 @@ v1.2.0
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Memory" Version="4.6.0" />
   </ItemGroup>
 
 </Project>

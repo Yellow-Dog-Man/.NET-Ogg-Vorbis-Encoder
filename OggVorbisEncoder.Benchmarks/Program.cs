@@ -10,6 +10,7 @@ namespace OggVorbisEncoder.Benchmarks;
 [SimpleJob(RuntimeMoniker.NetCoreApp31)]
 [SimpleJob(RuntimeMoniker.Net60)]
 [SimpleJob(RuntimeMoniker.Net70)]
+[SimpleJob(RuntimeMoniker.Net90)]
 public class EncoderBenchmarks
 {
     private readonly int WriteBufferSize = 512;
@@ -26,10 +27,11 @@ public class EncoderBenchmarks
     private byte[] ConvertRawPCMFile(int outputSampleRate, int outputChannels, byte[] pcmSamples, PcmSample pcmSampleSize, int pcmSampleRate, int pcmChannels)
     {
         int numPcmSamples = (pcmSamples.Length / (int)pcmSampleSize / pcmChannels);
-        float pcmDuraton = numPcmSamples / (float)pcmSampleRate;
+        float pcmDuration = numPcmSamples / (float)pcmSampleRate;
 
-        int numOutputSamples = (int)(pcmDuraton * outputSampleRate);
-        //Ensure that samble buffer is aligned to write chunk size
+        int numOutputSamples = (int)(pcmDuration * outputSampleRate);
+
+        // Ensure that sample buffer is aligned to write chunk size
         numOutputSamples = (numOutputSamples / WriteBufferSize) * WriteBufferSize;
 
         float[][] outSamples = new float[outputChannels][];
